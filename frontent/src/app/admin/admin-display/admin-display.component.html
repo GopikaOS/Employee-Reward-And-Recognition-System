@@ -1,0 +1,36 @@
+<div class="admin" style="margin-top: 10%;margin-left:10%;width: 80%;">
+  <div class="admin__profile">
+    <div class="admin__show"><img src="../../assets/adminlogo.png" alt=""></div>
+    <div class="admin__display" *ngIf="adminDisplay">
+      <h1>{{adminDisplay?.name}}</h1>
+      <p><strong>Email:</strong> {{adminDisplay?.email}}</p>
+      <p><strong>phoneNumber:</strong> {{adminDisplay?.phoneNumber}}</p>
+
+    </div>
+    <div class="p"></div>
+
+  </div>
+  <div class="profile___details">
+    <p>
+    <h3><b>A hearty welcome to the Admin Page!</b></h3>
+    We're delighted to have you join our administrative team
+    and contribute to the seamless functioning of this crucial aspect of our organization.<p>
+  </div>
+  <div class="boxAlignment">
+    <div class="profile__block">
+      <!-- <div class="box">Users<i class="fa-solid fa-users"></i>
+           <p>{{usersCount}}</p></div>
+        </div> -->
+    </div>
+    <div class="profile__block">
+      <div class="box">Current Users<i class="fa-duotone fa-users"></i>
+        <p style="font-size: 25px; font-weight: bold;">{{activeUsersCount}}</p>
+      </div>
+      <div class="box">Employees<i class="fa-solid fa-user-tie"></i>
+        <p style="font-size: 25px; font-weight: bold;">{{employeeCount}}</p>
+      </div>
+      <div class="box">Admin<i class="fa-solid fa-user"></i>
+        <p style="font-size: 25px; font-weight: bold;">{{adminCount}}</p>
+      </div>
+    </div>
+  </div>

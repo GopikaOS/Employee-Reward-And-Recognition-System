@@ -1,0 +1,27 @@
+
+
+<mat-toolbar style="background-color: #a3b7d6;">
+    <span class="fontstyle"> WELCOME TO ADMIN DASHBOARD</span>
+    <span class="example-spacer"></span>
+</mat-toolbar>
+<div class="layout">
+    <div class="leftside">
+        <ul>
+            <li routerLink= "homeAdmin"><i></i>🏠 Home</li>
+            <li routerLink="signup/null/false"><i></i>📝 Register Employee</li>
+            <li routerLink="userList"> <i></i>📋 User List</li>
+            <li routerLink="PointsAllocation"><i></i>💰Bytes Allocation</li>
+            <li routerLink="rewardAllocation"><i></i>🎖️ Awards</li>
+            <li routerLink="transaction"><i></i>💸 Transaction</li>
+            <li routerLink="topPerformer"><i></i>🏆Top performer</li>
+            <li routerLink="product"><i></i>🛍️ Product</li>
+            <li (click)=" logout()"><i></i>🚪Signout</li>
+          </ul>
+    </div>
+    <div class="rightside"><router-outlet></router-outlet>
+
+
+
+    </div>
+</div>
+

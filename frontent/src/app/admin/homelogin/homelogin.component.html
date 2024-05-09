@@ -1,0 +1,16 @@
+<section class="ers-login__bg">
+  <div class="ers-login__content">
+    <h1 class="ers-login__head">Employee Recognition And <br/><span>Reward System</span></h1>
+    <img src="../../assets/login-bg.svg" alt="REWARD SYSTEM" title="hai"/>
+  </div>
+  <div class="ers-login__box">
+    <p class="ers-login__log"></p>
+    <form [formGroup]="form">
+    <app-input [labelName]="'Email'" [parentForm]="form" [formControls]="'email'"></app-input>
+    <app-input [labelName]="'Password'" [type]="'Password'" [parentForm]="form" [formControls]="'password'"></app-input>
+    <div class="ers-login__cta">
+    <button class="ers-btn__primary" (click)="submit()">Login</button>
+    </div>
+    </form>
+  </div>
+</section>

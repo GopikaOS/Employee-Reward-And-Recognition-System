@@ -1,0 +1,41 @@
+.ers-login__log{
+    text-align: center;
+    color:#1B253C;
+    font-family: ui-monospace;
+    font-weight: bold;
+}
+.ers-login__box{
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ers-btn__primary{
+    margin :0%;
+
+
+}
+:host ::ng-deep .ers-input {
+    margin-bottom: 15px;
+ }
+.ers-login__box .form-control{
+
+  margin-bottom: 8px;
+  font-size: 12px;
+}
+.picture{
+  margin-left: 63%;
+  margin-top: -30%;
+  width: 15%;
+}
+.style{
+  margin-left: 35%;
+  margin-top: 1%;
+}
+
+.stylingtheform{
+  width: 50%;
+  padding: 20px;
+  border: 1px solid #ccc;
+  margin-top: 5%;
+}

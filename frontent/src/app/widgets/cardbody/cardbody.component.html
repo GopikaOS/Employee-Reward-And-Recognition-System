@@ -1,0 +1,26 @@
+<div class="card customizeproduct">
+
+  <img [src]="'data:image/png;base64,' + cardData?.picture" class="card-img-top" alt="Product Image">
+  <div class="card-body">
+    <span class="customizeproduct_id">{{ cardData?.id }}</span>
+    <div class="card-head">
+      <h5 class="card-title"> {{ cardData?.productName }}</h5>
+      <span> Bytes: {{ cardData?.bytesPoints}}</span>
+    </div>
+    <p class="card-text">{{ cardData?.description }}</p>
+    <div class="card-details"><b>Manufacturer Name:</b> {{ cardData?.manufacturerName }}</div>
+    <div class="card-details"><b>Category:</b> {{ cardData?.productCategory }}</div>
+    <span class="card-details"><b>Size: </b>{{ cardData?.size }}</span>
+    <p class="card-details"><b>Stock:</b> {{ cardData?.inStock }}</p>
+    <p class="card-details"><b>WarrantyInfo:</b> {{ cardData?.warrantyInfo }}</p>
+    <div class="card-cta">
+      <button *ngIf="!isRoleAdmin" type="submit" class="ers-btn__primary" [disabled]="!cardData?.inStock"
+        (click)="buyBox()">
+        Add to cart
+      </button>
+      <div class="delete" *ngIf="isRoleAdmin"  (click)="ondelete(cardData?.productId)">
+        <i class="fa fa-trash-alt"></i>
+      </div>
+    </div>
+  </div>
+</div>

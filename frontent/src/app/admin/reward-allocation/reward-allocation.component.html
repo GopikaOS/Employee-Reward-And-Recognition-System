@@ -1,0 +1,22 @@
+<div class="table-responsive-tablecustomize">
+
+  <table class="table table-striped table-bordered">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">Award ID</th>
+        <th scope="col">Award Name</th>
+        <th scope="col">BytesPoints</th>
+      </tr>
+
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of listOfAward">
+        <td>{{user.awardId}}</td>
+        <td>{{ user.awardName }}</td>
+        <td>{{ user.bytesPoints}}</td>
+
+      </tr>
+    </tbody>
+  </table>
+  <button  class="ers-btn__primary picturebutton" (click)="addRewards()"><img style="height: 30px; width: 30px;" src="../../assets/badge.png"><br>Add Awards</button>
+</div>

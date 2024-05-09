@@ -1,0 +1,30 @@
+<div class="cardBody">
+  <div style="display: flex;flex-direction: column; align-items: center; margin: 20px;  padding: 10px ;padding-bottom: 0px;border-color: black; border-width: 1px;border-radius: 10px; border-style: double; width: 70%;">
+  <div class="banner">
+    <video #videoPlayer autoplay loop>
+      <source src="../../assets/celebration.mp4" type="video/mp4">    
+  </video>
+    <div class="baneer_content">
+      <img src="../../assets/Winning-Trophy-PNG-Clipart-Background.png">
+      <div>
+        <h1 id="title">Top Performer</h1>
+        <div *ngIf="topPerformers?.length !== 0; else noPerformer">
+        <div class="name" *ngFor="let user of topPerformers">
+          <h1><b>{{ user?.name }}</b></h1>
+        </div>
+      </div>
+        <ng-template #noPerformer>
+          <p>No top performer data available.</p>
+        </ng-template>
+      </div>
+    </div>
+    
+  </div>
+    <div style="display: flex; flex-direction: column; align-items: center; justify-items: center; text-align: center;">
+      <strong>🌟 Celebrating Excellence 🌟</strong>
+      <p class="description">
+        A tribute to the exceptional individuals who consistently go above and beyond, setting the standard for excellence within our organization. This showcase is a testament to their dedication, achievements, and unwavering commitment to our shared success.
+      </p>
+      <p class="celebration">Congratulations!</p>
+    </div>
+  </div>

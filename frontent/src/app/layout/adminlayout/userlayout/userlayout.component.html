@@ -1,0 +1,25 @@
+
+
+
+<mat-toolbar style="background-color: #a3b7d6;">
+    <div class="logo">
+        <a href="index.html"> <img src="../../assets/bytestrone-logo-blue.webp" alt="BytesStore" width="125px" /></a>
+    </div>
+    <span class="fontstyle"> Welcome to Employee Dashboard </span>
+    <span class="example-spacer"></span>
+</mat-toolbar>
+<div class="layout">
+    <div class="leftside">
+        <ul>
+            <li routerLink= "userdisplay"><i></i>🏠Home</li>
+            <li routerLink="otherusers"><i></i>👁️ View your colleague</li>
+            <li routerLink="productdisplay"><i></i>🛍️ Product</li>
+            <li routerLink="orderHistory"><i></i> ⭐Points Timeline </li>
+            <li routerLink="cartpage"><i></i>🛒Cart</li>
+            <li routerLink="/"><i></i>🚪Signout</li>
+          </ul>
+    </div>
+    <div class="rightside"><router-outlet></router-outlet>
+    </div>
+</div>
+

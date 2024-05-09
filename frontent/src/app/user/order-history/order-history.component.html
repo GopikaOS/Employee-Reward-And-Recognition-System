@@ -1,0 +1,49 @@
+
+<mat-form-field>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Filter">
+</mat-form-field>
+<div class="main_table">
+  <mat-table #table [dataSource]="dataSource" matSort>
+
+    <ng-container matColumnDef="ID">
+      <mat-header-cell *matHeaderCellDef mat-sort-header class="heading">TransactionID</mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.transactionId}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="BytesPoint"> <!-- Replaced space with underscore -->
+      <mat-header-cell *matHeaderCellDef mat-sort-header class="heading"> Bytes Point </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.bytesPoint}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Item">
+      <mat-header-cell *matHeaderCellDef mat-sort-header class="heading"> Item </mat-header-cell>
+      <mat-cell *matCellDef="let row">
+        <div class="image">
+          <img *ngIf="row.picture" [src]="'data:image/png;base64,' + row.picture" class="card-img-top" alt="User Image">
+          <img *ngIf="!row.picture" src="../../assets/Winning-Trophy-PNG-Clipart-Background.png" class="card-img-top" alt="Default Image">
+        </div>
+      </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="ItemName"> <!-- Adjusted column name -->
+      <mat-header-cell *matHeaderCellDef mat-sort-header class="heading"> ItemName </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.itemName}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Status">
+      <mat-header-cell *matHeaderCellDef mat-sort-header class="heading"> Status </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.status}} </mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="Date">
+      <mat-header-cell *matHeaderCellDef mat-sort-header class="heading"> Date </mat-header-cell>
+      <mat-cell *matCellDef="let row"> {{row.date | date:'dd/MM/yyyy'}}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+  </mat-table>
+
+  <mat-paginator [pageSizeOptions]="[3,5, 10, 25, 100]"></mat-paginator>
+</div>

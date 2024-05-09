@@ -1,0 +1,53 @@
+.ers-login__bg{
+  background-color: #1B253C;
+  display: flex;
+  min-height: 100vh;
+  padding: 15px 60px;
+  align-items: center;
+  justify-content: space-around;
+  font-family: 'Poppins', sans-serif;
+}
+
+.ers-login__content img{
+  width: 80%;
+  height: auto;
+}
+
+.ers-login__head{
+  color: #fff;
+}
+
+.ers-login__box{
+  width: 400px;
+  background-color: #fff;
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 0 7px 5px #00000014;
+  min-height: 400px;
+  padding-left: auto;
+  
+}
+
+.ers-login__log{
+  font-size: 26px;
+  font-weight: 500;
+  color: #1B253C;
+  margin-bottom: 30px;
+
+}
+
+.ers-login__cta{
+  display: flex;
+  margin: 0 -8px;
+
+}
+.ers-login__cta button{
+  margin: 0 8px;
+
+}
+  
+
+
+:host ::ng-deep .ers-input {
+  margin-bottom: 30px;
+}

@@ -1,0 +1,13 @@
+<section class="ers-login__bg">
+
+    <div class="ers-login__box">
+        <p class="ers-login__log">Add new reward here 🏆 </p>
+       <form [formGroup]="rewardform">
+            <app-input [labelName]="'Award Name'"[parentForm]="rewardform" [formControls]="'awardName'"></app-input>
+            <app-input [labelName]="'BytesPoints'" [parentForm]="rewardform" type="Number" [formControls]="'bytesPoints'"></app-input>
+            <button class="ers-btn__primary style"  (click)="submit()" [disabled]="!rewardform.valid">submit </button>
+            <button class="ers-btn__primary style"  (click)="close()">close</button>
+        </form>
+    </div>
+</section>
+

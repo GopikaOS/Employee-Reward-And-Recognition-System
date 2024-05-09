@@ -1,0 +1,30 @@
+<section class="ers-login__bg">
+  <div class="alignment">
+    <div class="ers-login__box">
+      <p class="ers-login__log"></p>
+      <div class="stylingtheform">
+        <form [formGroup]="form" (ngSubmit)="updateUserDetails(form)">
+          <app-input class="boxstyle" [labelName]="'Name'" [parentForm]="form" [type]="'Name'"
+            [formControls]="'name'"></app-input>
+          <app-input [labelName]="'Email'" [type]="'Email'" [parentForm]="form" [formControls]="'email'"></app-input>
+          <app-input [labelName]="'Phone Number'" type="Number" [type]="'PhoneNumber'" [parentForm]="form"
+            [formControls]="'phoneNumber'"></app-input>
+          <select class="form-control" name="Role" formControlName="role" [value]="form.value.role">
+            <option value="" disabled selected>Position</option>
+            <!-- <option value="Admin">Admin</option> -->
+            <option value="Employee">Employee</option>
+          </select>
+          <ng-container *ngIf="!isEditMode">
+            <app-input [labelName]="'Password'" [type]="'Password'" [parentForm]="form"
+              [formControls]="'password'"></app-input>
+            <app-input [labelName]="'Confirm password'" [type]="'Password'" [parentForm]="form"
+              [formControls]="'confirmPassword'"></app-input>
+          </ng-container>
+          <button class="ers-btn__primary style" *ngIf="!isEditMode" type="submit" [disabled]="!form.valid">Register
+          </button>
+          <button *ngIf="isEditMode" class="ers-btn__primary style" type="submit">Update</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>

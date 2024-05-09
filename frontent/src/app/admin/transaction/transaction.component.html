@@ -1,0 +1,45 @@
+<mat-form-field>
+  <input matInput (keyup)="applyFilter($event)" placeholder="Filter">
+</mat-form-field>
+<div class="main_table">
+<mat-table #table [dataSource]="dataSource" matSort>
+
+  <ng-container matColumnDef="ID">
+    <mat-header-cell *matHeaderCellDef mat-sort-header class="heading">TransactionID</mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.transactionId}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef='UserName'>
+    <mat-header-cell *matHeaderCellDef mat-sort-header class="heading"> UserName </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.userName}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Bytespoint">
+    <mat-header-cell *matHeaderCellDef mat-sort-header class="heading"> Bytespoint </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.bytesPoint}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef='ItemName'>
+    <mat-header-cell *matHeaderCellDef mat-sort-header class="heading"> ItemName </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.itemName}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef='Status'>
+    <mat-header-cell *matHeaderCellDef mat-sort-header class="heading"> Status </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.status}} </mat-cell>
+  </ng-container>
+
+  <ng-container matColumnDef="Date">
+    <mat-header-cell *matHeaderCellDef mat-sort-header class="heading"> Date </mat-header-cell>
+    <mat-cell *matCellDef="let row"> {{row.date | date:'dd/MM/yyyy'}}</mat-cell>
+  </ng-container>
+
+
+  <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+  <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+
+</mat-table>
+<hr>
+
+<mat-paginator [pageSizeOptions]="[8, 15, 25, 100]"></mat-paginator>
+</div>

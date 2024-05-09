@@ -1,0 +1,26 @@
+
+
+<section class="ers-addproduct__bg">
+    <div class="ers-addproduct__content">
+
+    </div>
+    <div class="ers-addproduct__box">
+        <p class="ers-addproduct__log">Add product here !</p>
+        <form [formGroup]="productform"  enctype="multipart/form-data">
+            <app-input [labelName]="'product name'" [parentForm]="productform" [formControls]="'productName'"></app-input>
+            <app-input [labelName]="'Manufacturer name'" [parentForm]="productform" [formControls]="'manufacturerName'"></app-input>
+            <app-input [labelName]="'Bytes Point'" type="Number" [parentForm]="productform" [formControls]="'bytesPoints'"></app-input>
+            <app-input [labelName]="'product category'" [parentForm]="productform" [formControls]="'productCategory'"></app-input>
+            <app-input [labelName]="'size'" [parentForm]="productform" [formControls]="'size'"></app-input>
+            <app-input [labelName]="'inStock'" type="Number" [parentForm]="productform" [formControls]="'inStock'"></app-input>
+            <app-input [labelName]="'warrantyInfo'" [parentForm]="productform" [formControls]="'warrantyInfo'"></app-input>
+            <app-input [labelName]="'expiryDate'"   type="Date"  [parentForm]="productform" [formControls]="'expiryDate'"></app-input>
+            <app-input [labelName]="'description'" [parentForm]="productform" [formControls]="'description'"></app-input>
+            <input type="file"  (change)="uploadFile($event)" class="">
+            <div class="button">
+            <button class="ers-btn__primary done" (click)="submit()" [disabled]="!productform.valid">Done</button>
+            <button class="ers-btn__primary cancel" (click)="cancel()">Cancel</button>
+          </div>
+        </form>
+    </div>
+</section>

@@ -1,0 +1,56 @@
+
+.card-picture{
+	height: 200px;
+	/* width: 25%; */
+	border-radius: 5px;
+	/* margin-top: 10px; */
+}
+.description{
+	width: 50%;
+	padding-top: 20px;
+	font-family: cursive;	
+}
+.title{
+	font-family:cursive;
+	font-weight: 800;	
+}
+.name{
+	/* margin-left: 10%; */
+	font-family: cursive;	
+	font-weight: 100%;
+}
+.celebration{
+	width: 50%;
+	font-family: cursive;
+	/* margin-left: 10%;	 */
+
+}
+.banner video{
+	width: 100%;
+    object-fit: contain;
+    object-position: center; 
+}
+.banner{
+	position: relative;
+	height: 250px;
+	overflow: hidden;
+	border-radius: 5px;
+    margin-bottom: 30px
+}
+.baneer_content{
+	position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+	justify-content: center;
+
+}
+.baneer_content img {
+	height: 170px;
+	margin: 0%;
+}
+.baneer_content>div{
+	color: white;
+	font-weight: bolder;
+	
+}

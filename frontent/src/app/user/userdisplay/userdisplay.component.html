@@ -1,0 +1,28 @@
+<div class="admin" style="margin-top: 10%;margin-left:10%;width: 80%;">
+    <div class="admin__profile">
+        <div class="admin__show"><img src="../../assets/Screenshot (99).png" alt=""></div>
+
+        <div class="userDisplay" *ngIf="userDisplay">
+            <h1> Hai {{userDisplay?.name}}</h1>
+                <p><strong>Email:</strong> {{userDisplay?.email}}</p>
+                <p><strong>phoneNumber:</strong> {{userDisplay?.phoneNumber}}</p>
+        </div>
+
+
+    </div>
+    <div class="profile___details">
+        <p><h3><b>Heartfelt Welcome to the Bytestrone Family!</b></h3>
+            We are thrilled to have you join our team, and we believe that
+             your skills and talents will contribute significantly to our collective success.
+           <p>
+    </div>
+    <div class="profile__block">
+
+        <div class="box">Current BytesPoint<i class="fa-solid fa-trophy"></i>
+            <p>{{userDisplay?.currentBytePoints}}</p>
+        </div>
+        <div class="box">Total BytesPoint<i class="fa-solid fa-trophy"></i>
+            <p>{{userDisplay?.totalBytesPoints}}</p>
+        </div>
+    </div>
+</div>

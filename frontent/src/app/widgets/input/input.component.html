@@ -1,0 +1,10 @@
+<div class="ers-input">
+  <ng-container [formGroup]="parentForm">
+    <label for="">{{labelName}}</label>
+    <input [type]="type" [name]="name" [placeholder]="type" [formControlName]="formControls"/></ng-container>
+    <ng-container *ngIf="parentForm?.controls?.[formControls]?.touched">
+    <span *ngIf="parentForm?.controls?.[formControls]?.errors?.['email']" class="ers-error">Email must be a valid email address</span>
+    <span *ngIf="parentForm?.controls?.[formControls]?.errors?.['pattern']" class="ers-error">Enter valid 10 digit Phone number </span>
+    <span *ngIf="parentForm?.controls?.[formControls]?.errors?.['required']" class="ers-error">*This field is Required</span>
+  </ng-container>
+</div>

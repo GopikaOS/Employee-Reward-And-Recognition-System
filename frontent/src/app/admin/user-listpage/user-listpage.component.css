@@ -1,0 +1,12 @@
+.tablecustomize{
+    width: 100%;
+}
+
+
+  #myModal {
+    background-color: var(--bs-modal-bg);
+  }
+  #myModal.custom-modal {
+    background-color: inherit !important; /* or any other color you want */
+  }
+

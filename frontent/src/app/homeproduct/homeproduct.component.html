@@ -1,0 +1,14 @@
+<div class="picture">
+    <button *ngIf="Admin" (click)="addproductbox()" class="ers-btn__primary picturebutton"><img style="height: 30px; width: 30px;" src="../../assets/addproduct.png"><br>Add Product</button>
+</div>
+<div>
+    <input type="text" [(ngModel)]="searcher" placeholder="Search by category" style="width: 300px;margin-left:35px;">
+    <div class="cart">
+        <i *ngIf="Employee" class="fas fa-cart-shopping" [routerLink]="['../cartpage']"></i>
+    </div>
+</div>
+<div class="productview">
+    <div class="product spacing" *ngFor="let product of listOfProduct | searchFilter : searcher:['productCategory']">
+        <app-cardbody (productEvent)="buynow(product)" [cardData]="product" (deleteEvent)="deleteProduct(product)"></app-cardbody>
+    </div>
+</div>

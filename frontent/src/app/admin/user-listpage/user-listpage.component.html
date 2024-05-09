@@ -1,0 +1,34 @@
+
+
+<div class="table-responsive-tablecustomize">
+    <table class="table table-striped table-bordered">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">Employee ID</th>
+          <th scope="col">Name</th>
+          <th scope="col">Email</th>
+          <th scope="col">Phone Number</th>
+          <th scope="col">Current BytesPoints</th>
+          <th scope="col">Total BytesPoints</th>
+          <th scope="col">Action</th>
+
+        </tr>
+
+      </thead>
+      <tbody>
+        <tr *ngFor="let user of listOfEmployee">
+          <td>{{ user.id }}</td>
+          <td>{{ user.name }}</td>
+          <td>{{ user.email }}</td>
+          <td>{{ user.phoneNumber }}</td>
+          <td>{{user.currentBytePoints}}</td>
+          <td>{{user.totalBytesPoints}}</td>
+          <td>
+                <i style="color:#1F378C;" class="fa fa-pencil-alt" (click)="onEdit(user.id)"></i>&nbsp;
+                <i style="color:red;" class="fa fa-trash-alt" (click)="onDelete(user.id)"></i>  
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

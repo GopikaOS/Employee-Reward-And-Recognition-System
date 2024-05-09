@@ -1,0 +1,37 @@
+<section class="ers-bytepoints__bg">
+  <div class="ers-bytespoint__content">
+  </div>
+  <h2 class="heading">Byte Allocation Zone 🏅 </h2>
+  <div class="ers-bytepoints__box">
+    <form [formGroup]="bytesForm">
+      <mat-form-field appearance="fill">
+        <mat-label>Select employees </mat-label>
+        <mat-select [formControl]="selectedEmployee" multiple>
+          <mat-select-trigger>
+            {{selectedEmployee.value?.at(0)?.name || ''}}
+            <span *ngIf="(forms['id'].value?.length || 0) > 1" class="example-additional-selection">
+              (+{{(forms['id'].value?.length || 0) - 1}} {{forms['id'].value?.length === 2 ? 'other' :
+              'others'}})
+            </span>
+          </mat-select-trigger>
+          <mat-option *ngFor="let employee of listOfEmployee" [value]="employee">{{employee.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <select class="form-control" name="rewardId" formControlName="rewardId" (change)="awardChange($event)">
+        <option value="" disabled selected> Award Name</option>
+        <ng-container *ngFor="let item of listOfAwards">
+          <option [value]="item.awardId">{{item.awardName}}</option>
+        </ng-container>
+      </select>
+      <div class="ers-input" *ngIf="other">
+        <label for="">add your addtional text here</label>
+        <textarea class="" formControlName="other"></textarea>
+      </div>
+      <button class="ers-btn__primary" (click)="bytespointsallocation()" [disabled]="!bytesForm.valid">Done</button>
+    </form>
+  </div>
+
+  <!-- <div class="picture"><img src="../../assets/medal.png"></div> -->
+  <!-- <img class="picture"src="../../assets/goldmedal.png"> -->
+  <img class="picture" src="../../assets/rewards.png">
+</section>

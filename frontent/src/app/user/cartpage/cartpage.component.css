@@ -1,0 +1,26 @@
+.img-responsive{
+    width: 50px;
+    
+}
+/* your-component.component.css */
+.counter {
+    display: flex;
+    align-items: center;
+  }
+  
+  .counter-btn {
+    background-color: #4caf50;
+    border: none;
+    color: white;
+    padding: 5px; /* Reduce padding to make the buttons smaller */
+    font-size: 12px; /* Reduce font size to make the buttons smaller */
+    cursor: pointer;
+  }
+  
+  .counter-input {
+    width: 30px; /* Set a smaller width for the input field */
+    text-align: center;
+    margin: 0 5px; /* Reduce margin for a more compact layout */
+    font-size: 12px; /* Reduce font size for a smaller input field */
+  }
+  

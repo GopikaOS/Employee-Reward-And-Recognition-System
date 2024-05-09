@@ -1,0 +1,42 @@
+
+.ers-addproduct__bg {
+    background-color: #f4f4f4;
+    padding: 20px;
+}
+
+.ers-addproduct__content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.ers-addproduct__box {
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+.ers-addproduct__box form {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.ers-addproduct__box form app-input {
+    flex: 0 0 calc(50% - 10px);
+    margin-bottom: 20px;
+}
+ .ers-addproduct__box form button {
+    color: #fff;
+    border: none;
+}
+
+.done{
+    width: 9%;
+    height: 42px;
+}
+.cancel{
+  width: 9%;
+  height: 42px;
+}
+.button{
+  display: flex;
+}
+

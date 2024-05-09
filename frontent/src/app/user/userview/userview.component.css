@@ -1,0 +1,83 @@
+
+  /* Container styling */
+  .admin {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 5%;
+    margin-left: 5%;
+    width: 90%;
+  }
+
+  /* Card styling */
+  .card {
+    background-color: aliceblue;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 0 20px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+
+  .card:hover {
+    transform: scale(1.05);
+  }
+
+  /* Profile section styling */
+  .admin__profile {
+    display: flex;
+    align-items: center;
+  }
+
+  .admin__show img {
+    max-width: 120px;
+    border-radius: 50%;
+    margin-right: 20px;
+  }
+
+  .admin__display {
+    margin-top: 20px;
+  }
+
+  .admin__display h1 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+
+  .admin__display p {
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+
+  /* Points section styling */
+  .profile__block {
+    display: flex;
+    align-items: center;
+  }
+
+  .box {
+    padding: 15px;
+    border: 1px solid #e1e1e1;
+    border-radius: 10px;
+    margin: 0 10px;
+    display: flex;
+    align-items: center;
+  }
+
+  .box i {
+    font-size: 24px;
+    color: gold;
+    margin-right: 10px;
+  }
+
+  .box p {
+    font-size: 16px;
+    font-weight: 500;
+    margin: 0;
+  }
+  .profile__block{
+    display: flex!important;
+  }
